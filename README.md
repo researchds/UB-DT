@@ -3,7 +3,11 @@
 This repository contains the code and supplementary results of a submitted paper to PAKDD conference.
 
 
-#Experimental Results
+# Experimental Results
+
+![image](https://user-images.githubusercontent.com/103153876/207078859-0e39e203-f160-48c7-b8b1-9e7ac9cf4af9.png)
+
+
 | {}            | XLearnerLR    | XLearnerXgboost | XLearnerRF   | RLearnerLR | RLearnerXgboost | RLearnerRF | DR_LR      | DR_Xgboost | DR_RF      | 2M_LR         | 2M_Xgboost | 2M_rfc    | 2M_DT     | KL_RF      | Chi_RF       | ED_RF         | CTS_RF     | UMODL_RF      | UMODL_DT  | KL_DT      | Chi_DT     | ED_DT        | CTS_DT     | CausalForest |
 |---------------|---------------|-----------------|--------------|------------|-----------------|------------|------------|------------|------------|---------------|------------|-----------|-----------|------------|--------------|---------------|------------|---------------|-----------|------------|------------|--------------|------------|--------------|
 | Method        |               |                 |              |            |                 |            |            |            |            |               |            |           |           |            |              |               |            |               |           |            |            |              |            |              |
