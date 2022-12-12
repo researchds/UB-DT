@@ -4,11 +4,34 @@ This repository contains the code and supplementary results of a submitted paper
 
 
 # Experimental Results
+### UB-DT compared with uplift tree-based methods:
+![image](https://user-images.githubusercontent.com/103153876/207080808-d96339d5-6e9a-4ea6-8869-d54a0a269cf0.png)
 
-![image](https://user-images.githubusercontent.com/103153876/207079466-66df9517-91a8-48d2-b3e5-c1d888be9e1e.png)
+| {}            | 2M_DT        | KL_DT      | Chi_DT     | ED_DT         | CTS_DT     | UMODL_DT      |
+|---------------|--------------|------------|------------|---------------|------------|---------------|
+| Method        |              |            |            |               |            |               |
+| Hillstrom-m   | 0.1(1.4)     | 1.1(1.9)   | 1.0(1.9)   | 0.0(1.4)      | 0.2(1.0)   | **1.6(1.6)**  |
+| Hillstrom-w   | 0.9(2.0)     | 5.2(2.5)   | 5.2(2.6)   | **6.4(1.2)**  | -0.4(2.0)  | 4.8(2.3)      |
+| Hillstrom-mw  | -0.5(0.8)    | -0.1(1.2)  | -0.8(1.1)  | **4.4(2.7)**  | -0.0(1.0)  | -0.4(1.4)     |
+| Gerber-n      | **5.5(0.9)** | 1.3(0.8)   | 1.2(0.8)   | 1.1(0.6)      | 1.3(0.8)   | 1.9(0.6)      |
+| Gerber-s      | **5.6(0.8)** | 0.4(0.5)   | 0.4(0.6)   | 0.5(0.3)      | 0.4(0.4)   | 0.8(0.6)      |
+| Criteo-c      | 7.5(1.1)     | 4.1(1.4)   | 4.8(1.5)   | **15.2(0.3)** | 1.7(0.3)   | 13.7(3.2)     |
+| Criteo-v      | 0.4(0.3)     | -1.2(0.2)  | -1.1(0.3)  | -1.3(0.3)     | 0.4(1.1)   | **3.6(1.2)**  |
+| Megafon       | 5.2(0.5)     | 4.5(0.9)   | 4.7(0.9)   | 4.7(0.9)      | 4.9(0.8)   | **7.8(0.8)**  |
+| Bank-tel      | 5.9(3.6)     | -12.5(2.8) | -10.8(7.0) | -10.2(7.8)    | -12.8(2.9) | **12.8(8.0)** |
+| Bank-cell     | 10.5(3.3)    | -2.0(1.5)  | -1.4(2.5)  | -2.2(1.5)     | -3.7(1.5)  | **38.4(3.4)** |
+| Bank-tel-cell | 10.7(2.3)    | -1.9(1.2)  | -1.2(2.1)  | -1.8(1.2)     | -3.4(1.4)  | **37.1(2.6)** |
+| Information   | 4.4(3.2)     | -6.3(2.8)  | -6.3(2.8)  | -2.8(1.5)     | -5.4(1.5)  | **11.8(2.4)** |
+| Starbucks     | 1.2(1.7)     | 20.1(3.0)  | 18.3(3.4)  | 19.9(3.2)     | 13.9(3.9)  | **20.2(3.5)** |
+| RHC           | 12.8(1.9)    | 18.4(3.8)  | 19.9(4.2)  | 18.4(3.8)     | 16.7(2.5)  | **20.7(5.0)** |
 
 
-| {}            | XLearnerLR    | XLearnerXgboost | XLearnerRF   | RLearnerLR | RLearnerXgboost | RLearnerRF | DR_LR      | DR_Xgboost | DR_RF      | 2M_LR         | 2M_Xgboost | 2M_rfc    | KL_RF      | Chi_RF       | ED_RF         | CTS_RF     | UMODL_RF      | CausalForest |
+
+### UB-RF compared with meta learners and forest-based methods:
+
+![image](https://user-images.githubusercontent.com/103153876/207080249-ffc2e052-dbd7-4096-a615-c0670a42a356.png)
+
+| {}            | XLearnerLR    | XLearnerXgboost | XLearnerRF   | RLearnerLR | RLearnerXgboost | RLearnerRF | DR_LR      | DR_Xgboost | DR_RF      | 2M_LR         | 2M_Xgboost | 2M_rfc    | KL_RF      | Chi_RF       | ED_RF         | CTS_RF     | UB_RF      | CausalForest |
 |---------------|---------------|-----------------|--------------|------------|-----------------|------------|------------|------------|------------|---------------|------------|-----------|------------|--------------|---------------|------------|---------------|--------------|
 | Method        |               |                 |              |            |                 |            |            |            |            |               |            |           |            |              |               |            |               |              |
 | Hillstrom-m   | 0.2(2.0)      | 0.3(2.3)        | -0.3(1.9)    | 0.2(2.1)   | 0.3(1.8)        | 0.9(2.3)   | 1.3(1.8)   | 1.2(1.6)   | -0.9(2.0)  | 0.2(2.0)      | 0.7(2.3)   | -0.7(1.5) | -0.0(2.1)  | -0.9(1.5)    | 0.7(1.5)      | 1.1(1.9)   | **1.8(1.6)**  | -0.2(1.6)    |
