@@ -8,9 +8,22 @@ Treatment and output variable should respetively be name 'T' and 'Y' and should 
 
 <pre><code>
 import Tree
+import pandas as pd
 
 T=Tree.UpliftTreeClassifier(df_train)
 T.growTree()
+preds=T.predict(df_test[cols])
+</code></pre>
+
+## How to test a UB-RF ?
+
+Treatment and output variable should respetively be name 'T' and 'Y' and should be boolean variables.
+
+<pre><code>
+from UMODL_Forest import UMODL_RandomForest
+
+T=UMODL_RandomForest(df_train,numberOfTrees=NumberOfTreesInForests)
+T.fit()
 preds=T.predict(df_test[cols])
 </code></pre>
 
