@@ -7,6 +7,8 @@ This repository contains the code and supplementary results of a submitted paper
 Treatment and output variable should respetively be name 'T' and 'Y' and should be boolean variables.
 
 <pre><code>
+import Tree
+
 T=Tree.UpliftTreeClassifier(df_train)
 T.growTree()
 preds=T.predict(df_test[cols])
