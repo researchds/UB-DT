@@ -2,12 +2,21 @@
 
 This repository contains the code and supplementary results of a submitted paper to PAKDD conference.
 
+## How to test a UB-DT ?
 
-# Supplementary experimental results
+Treatment and output variable should respetively be name 'T' and 'Y' and should be boolean variables.
 
-## Real Datasets
+<pre><code>
+T=Tree.UpliftTreeClassifier(df_train)
+T.growTree()
+preds=T.predict(df_test[cols])
+</code></pre>
 
-### UB-DT compared with uplift tree-based methods:
+## Supplementary experimental results
+
+### Real Datasets
+
+#### UB-DT compared with uplift tree-based methods:
 ![image](https://user-images.githubusercontent.com/103153876/207080808-d96339d5-6e9a-4ea6-8869-d54a0a269cf0.png)
 
 | {}            | 2M_DT        | KL_DT      | Chi_DT     | ED_DT         | CTS_DT     | UMODL_DT      |
@@ -30,7 +39,7 @@ This repository contains the code and supplementary results of a submitted paper
 
 
 
-### UB-RF compared with meta learners and forest-based methods:
+#### UB-RF compared with meta learners and forest-based methods:
 
 ![image](https://user-images.githubusercontent.com/103153876/207080249-ffc2e052-dbd7-4096-a615-c0670a42a356.png)
 
